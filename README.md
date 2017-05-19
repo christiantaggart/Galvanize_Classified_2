@@ -14,8 +14,8 @@ Copy your files from **Part 1** into the **server** directory.  Adjust your serv
 
 You are responsible for:
 
-- [ ] Forking and cloning this GitHub Repo.
-- [ ] Creating a simple Angular front end.
+- [x] Forking and cloning this GitHub Repo.
+- [x] Creating a simple Angular front end.
 - [ ] Deployment of the App on Heroku.
 
 ### Functionality
@@ -28,4 +28,3 @@ The app should do the following:
 - Delete an ad
 - Filter ads (titles and descriptions)
 - Sort ads based on posting date and price
-

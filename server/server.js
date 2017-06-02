@@ -9,7 +9,8 @@ const secrets = require('./routes/classifieds');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use('/classifieds',secrets);
+
+app.use('/api/classifieds',secrets);
 
 
 app.use('/spa', express.static(__dirname + "/../client/spa"));

@@ -8,18 +8,24 @@
   function service($http) {
 
     this.$all = function() {
-      return $http.get('/classifieds').then(all => all.data)
+      // console.log('inside SecretService');
+      return $http.get('/api/classifieds').then((all) => {
+        // console.log('all ', all);
+        return all.data
+      })
     }
 
     this.newSecret = function(newSecret) {
-      $http.post('/classifieds', newSecret)
+      console.log('SecretService post request = ', newSecret)
+      $http.post('/api/classifieds', newSecret)
     }
 
     this.$hush = function(id) {
-      return $http.delete(`/classifieds/${id}`)
+      return $http.delete(`/api/classifieds/${id}`)
     }
+
     this.$change = function(edit) {
-      $http.patch(`/classifieds/${edit.id}/`, edit)
+      $http.patch(`/api/classifieds/${edit.id}/`, edit)
     }
 
   }

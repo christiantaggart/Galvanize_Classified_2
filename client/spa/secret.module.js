@@ -30,10 +30,13 @@
         })
     }
 
-    function $newSecret(secret) {
-      SecretService.newSecret(vm.secret)
-      delete vm.secret
+    function $newSecret() {
+      // console.log('vm.secret = ', vm.secret)
+      SecretService.newSecret(vm.newSecret)
+      delete vm.newSecret
     }
+
+
 
     function $hush(id) {
       SecretService.$hush(id.id)
@@ -45,8 +48,8 @@
     }
 
     function $change(edit) {
-// console.log(secret.id);
-// console.log(vm.changing.id);
+      // console.log(secret.id);
+      // console.log(vm.changing.id);
       SecretService.$change(vm.changing)
     }
 
